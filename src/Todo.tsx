@@ -1,20 +1,29 @@
-import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
-const App: React.FC = () => {
+import React, { useState } from "react";
+import { Tabs, Button, Input } from "antd";
+const { TabPane } = Tabs;
 
-    return (
-        <div>
-            <ul>
-                <li>
-                    <Link to="home">home</Link>
-                </li>
-            </ul>
-            <Switch>
-                <Route path="/home" />
-                <Route path="/about" />
-            </Switch>
-        </div>
-    )
+export interface ITodo {
+  id: number;
+  body: string;
+  completed: boolean;
 }
+type ITodoList = ITodo[];
+
+const App: React.FC = () => {
+  const todoList: ITodoList = [];
+  const [value, setValue] = useState();
+  console.log(todoList, value);
+  return (
+    <Tabs defaultActiveKey="1">
+      <TabPane key="1" tab="未完成">
+        <Input onChange={e => setValue(e.target.value)} />
+        <Button type="primary">add</Button>
+      </TabPane>
+      <TabPane key="2" tab="已完成">
+        22
+      </TabPane>
+    </Tabs>
+  );
+};
 
 export default App;
