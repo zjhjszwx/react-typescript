@@ -10,14 +10,27 @@ export interface ITodo {
 type ITodoList = ITodo[];
 
 const App: React.FC = () => {
-  const todoList: ITodoList = [];
   const [value, setValue] = useState();
+  const [todoList, setTodoList] = useState<ITodoList>([]);
+
+  const addHandle = () => {
+    setTodoList([
+      ...todoList,
+      { id: Math.random(), body: value, completed: false }
+    ]);
+    setValue(null);
+  };
   console.log(todoList, value);
   return (
     <Tabs defaultActiveKey="1">
       <TabPane key="1" tab="未完成">
-        <Input onChange={e => setValue(e.target.value)} />
-        <Button type="primary">add</Button>
+        <Input onChange={e => setValue(e.target.value)} value={value} />
+        {todoList.map(i => (
+          <div key={i.id}>{i.body}</div>
+        ))}
+        <Button type="primary" onClick={addHandle}>
+          add
+        </Button>
       </TabPane>
       <TabPane key="2" tab="已完成">
         22
