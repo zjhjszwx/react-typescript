@@ -1,3 +1,6 @@
+//语法
+//(变量/函数):type
+
 //number string
 let name1: string = "xxx";
 let number1: number = 11;
@@ -79,7 +82,7 @@ let myStr: number = myArray[0];
 // 可索引类型有一个索引签名,描述了对象索引的类型,还有相应的索引返回值类型
 interface StringObj {
   ["a"]: string;
-  [xx: string]: string;
+  [xx: string]: any;
 }
 let myObj1: StringObj = { a: "11", name: "bob" };
 // console.log(myObj1.name);

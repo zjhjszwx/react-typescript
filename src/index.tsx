@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import App from "./Todo";
+import App from "./container/Todo";
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 import "antd/dist/antd.css";

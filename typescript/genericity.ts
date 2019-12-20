@@ -1,10 +1,12 @@
+//让函数在运行的时候才确定变量的类型
+
 // 泛型
 function identity<T>(arg: T): T {
   return arg;
 }
 let output = identity<string>("myString");
 // let output = identity("myString") //自动推导
-
+// 我们给identity添加了类型变量T。 T帮助我们捕获用户传入的类型（比如：number），之后我们就可以使用这个类型。 之后我们再次使用了 T当做返回值类型。现在我们可以知道参数类型与返回值类型是相同的了。
 // 等价
 // function loggingIdentity<a>(arg: a[]): a[] {
 function loggingIdentity<a>(arg: Array<a>): Array<a> {
@@ -38,7 +40,7 @@ function identity3<T>(arg: T): T {
 }
 let myIdentity3: GenericIdentity3<number> = identity3;
 // console.log(myIdentity2(1));
-// 不再描述泛型函数, 而是吧非泛型函数签名作为泛型类型的一部分.
+// 不再描述泛型函数, 而是把非泛型函数签名作为泛型类型的一部分.
 
 // 泛型类(使用<>扩起泛型类型,跟在类名后面)
 class GenericNumber<T> {
