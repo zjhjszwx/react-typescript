@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Input, message, Button } from "antd";
 import { context } from "./Todo";
 function unfinish() {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('');
   const { todoList, setTodoList } = useContext(context);
   const addHandle = () => {
     if (value) {
@@ -10,7 +10,7 @@ function unfinish() {
         ...todoList,
         { id: Math.random(), body: value, completed: false }
       ]);
-      setValue(null);
+      setValue('');
     } else {
       message.error("请输入数据");
     }
