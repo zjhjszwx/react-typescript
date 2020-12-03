@@ -11,4 +11,13 @@ enum Direction2 {
   right,
   up = "UP"
 }
+enum Direction3 {
+  Up = 'up',
+  Down = 'down',
+  Left = 'left',
+  Right = 'right'
+}
+
 console.log(Direction2.down); //0
+console.log(Direction3.Up); // ?? 反向映射访问
+

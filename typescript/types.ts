@@ -9,4 +9,7 @@ let x2: Named;
 let y = { name: "alice", location: "seattle" };
 x2 = y;
 
+type Person = Number | String;
+let p: Person = 'aa';
+
 // let obj: test.Person;
