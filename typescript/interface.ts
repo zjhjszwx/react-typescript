@@ -1,6 +1,7 @@
 //语法
 //(变量/函数):type
 
+
 //number string
 let name1: string = "xxx";
 let number1: number = 11;

@@ -10,6 +10,7 @@ function unfinish() {
         ...todoList,
         { id: Math.random(), body: value, completed: false }
       ]);
+      
       setValue('');
     } else {
       message.error("请输入数据");
