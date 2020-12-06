@@ -10,3 +10,6 @@ foo1.bas = 'hello'
 
 let foo2: any;
 let bar2 = '123';
+
+//避免滥用
+

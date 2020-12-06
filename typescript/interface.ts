@@ -1,13 +1,12 @@
 //语法
 //(变量/函数):type
 
-
 //number string
 let name1: string = "xxx";
 let number1: number = 11;
 // 元组
-let x: [number, string];
-x = [10, "string"];
+let x2: [number, string];
+x2 = [10, "string"];
 // 枚举
 enum Color {
   Red,
@@ -66,7 +65,7 @@ let mySquare = createSquare({ width: 20, colur: "red" } as SquareConfig);
 interface Ifun {
   (xx: string): boolean;
 }
-let func: Ifun = function(s: string) {
+let func: Ifun = function (s: string) {
   return true;
 };
 
@@ -99,7 +98,7 @@ class Clock implements ClockInterface {
   setTime(x: Date) {
     this.currentTime = x;
   }
-  constructor(h: number, n: number) {}
+  constructor(h: number, n: number) { }
 }
 let myClock = new Clock(10, 10);
 myClock.setTime(new Date());
@@ -124,8 +123,8 @@ interface Counter {
   reset(): void;
 }
 function getCounter(): Counter {
-  let counter = <Counter>function(s: number) {};
-  counter.reset = function() {};
+  let counter = <Counter>function (s: number) { };
+  counter.reset = function () { };
   counter.interval = 123;
   //   counter.r = 1; //Counter 上面没有属性r
   return counter;
@@ -141,7 +140,7 @@ interface SelectableControl extends Control {
 }
 
 class Button extends Control implements SelectableControl {
-  select() {}
+  select() { }
 }
 //SelectableControl继承了 Control, 所以这个接口类型只能被Control或者他的子类实现
 // class Image implements SelectableControl {
