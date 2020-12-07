@@ -9,11 +9,11 @@ let x2: [number, string];
 x2 = [10, "string"];
 // 枚举
 enum Color {
-  Red,
+  Red1,
   Green = 2,
   Blue
 }
-let c: Color = Color.Green;
+let c1: Color = Color.Green;
 // console.log(c);
 //void
 let unusable: void = null;

@@ -27,9 +27,9 @@ let nu: null = null
 let noReturn = () => { }
 
 //any
-let x
-x = 1
-x = true
+let xx
+xx = 1
+xx = true
 
 //never never类型表示的是那些永不存在的值的类型。
 let error = () => {
