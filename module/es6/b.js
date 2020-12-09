@@ -1,1 +1,3 @@
-let a = 1
+import { bar } from './a.js'
+console.log(bar);
+export let foo = 'foo'
