@@ -98,10 +98,15 @@ class Drag extends React.Component<drag.DragProps, drag.DragState> {
     this.setState({ left, top })
   }
 
-  public dragEnd(ev: drag.TouchEvent): void {
+  public dragEnd(): void {
     const { onDragEnd } = this.props
     document.removeEventListener('mousemove', this._dragMove)
     document.removeEventListener('mouseup', this._dragEnd)
+
+    function a(b) {
+      b = 2
+    }
+    a(1)
 
     if (onDragEnd) {
       onDragEnd({
@@ -126,6 +131,8 @@ class Drag extends React.Component<drag.DragProps, drag.DragState> {
       styles['zIndex'] = this.zIndex
     }
     const cls = classnames('dragbox', className)
+
+    // const a = 123
 
     return (
       <div

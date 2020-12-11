@@ -54,7 +54,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'husky'"
+      "pre-commit": "echo 'husky' & npm run lint"
     }
   },
   "devDependencies": {

@@ -14,7 +14,6 @@ type Todos = Todo[]
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todos>([])
-  const a = 1
   // var b = 1
   useEffect(() => {
     refreshTodos()

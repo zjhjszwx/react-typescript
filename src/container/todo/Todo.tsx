@@ -28,7 +28,7 @@ function CounterProvider({ children }: IProps) {
   return <context.Provider value={value}>{children}</context.Provider>
 }
 
-const App: React.FC = props => {
+const App: React.FC = () => {
   return (
     <Tabs defaultActiveKey="1">
       <TabPane key="1" tab="未完成">
