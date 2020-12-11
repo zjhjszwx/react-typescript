@@ -22,7 +22,7 @@ module.exports = {
       "vars": "all", "args": "after-used", "ignoreRestSiblings": false
     }],
     // 不允许使用未使用的表达式
-    "no-unused-expressions": ["error", {
+    "@typescript-eslint/no-unused-expressions": ["error", {
       "allowShortCircuit": true,
       "allowTernary": true,
       "allowTaggedTemplates": true
