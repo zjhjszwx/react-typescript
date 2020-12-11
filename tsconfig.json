@@ -1,31 +1,28 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",           //解析非相对模块名的基准目录
-    "outDir": "build/dist",   //重定向输出目录。
+    "baseUrl": ".", //解析非相对模块名的基准目录
+    "outDir": "build/dist", //重定向输出目录。
     "module": "esnext",
     "target": "es5",
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "sourceMap": true,            //生成相应的 .map文件
-    "allowJs": true,              //允许编译js文件
-    "jsx": "react",               // 在preserve模式下生成代码中会保留JSX以供后续的转换操作使用（比如：Babel）。 另外，输出文件会带有.jsx扩展名。 react模式会生成React.createElement，在使用前不需要再进行转换操作了，输出文件的扩展名为.js。 react-native相当于preserve，它也保留了所有的JSX，但是输出文件的扩展名是.js。
+    "lib": ["es6", "dom"],
+    "sourceMap": true, //生成相应的 .map文件
+    "allowJs": true, //允许编译js文件
+    "jsx": "react", // 在preserve模式下生成代码中会保留JSX以供后续的转换操作使用（比如：Babel）。 另外，输出文件会带有.jsx扩展名。 react模式会生成React.createElement，在使用前不需要再进行转换操作了，输出文件的扩展名为.js。 react-native相当于preserve，它也保留了所有的JSX，但是输出文件的扩展名是.js。
     "moduleResolution": "node",
     // "rootDir": "src", //仅用来控制输出的目录结构
     "forceConsistentCasingInFileNames": true, //禁止对同一个文件的不一致的引用。
-    "noImplicitReturns": true,    //不是函数的所有返回路径都有返回值时报错。
-    "noImplicitThis": true,       //当 this表达式的值为 any类型的时候，生成一个错误。
-    "noImplicitAny": true,        //在表达式和声明上有隐含的 any类型时报错。
-    "importHelpers": true,        //从 tslib 导入辅助工具函数（比如 __extends， __rest等）
-    "strictNullChecks": true,     //在严格的 null检查模式下， null和 undefined值不包含在任何类型里，只允许用它们自己和 any来赋值（有个例外， undefined可以赋值到 void）。
+    "noImplicitReturns": true, //不是函数的所有返回路径都有返回值时报错。
+    "noImplicitThis": true, //当 this表达式的值为 any类型的时候，生成一个错误。
+    "noImplicitAny": true, //在表达式和声明上有隐含的 any类型时报错。
+    "importHelpers": true, //从 tslib 导入辅助工具函数（比如 __extends， __rest等）
+    "strictNullChecks": true, //在严格的 null检查模式下， null和 undefined值不包含在任何类型里，只允许用它们自己和 any来赋值（有个例外， undefined可以赋值到 void）。
     "suppressImplicitAnyIndexErrors": true, //阻止 --noImplicitAny对缺少索引签名的索引对象报错。查看 issue #1232了解详情。
-    "noUnusedLocals": false,       //若有未使用的局部变量则抛错。
+    "noUnusedLocals": false, //若有未使用的局部变量则抛错。
     "allowSyntheticDefaultImports": true, //允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
     "allowUnreachableCode": false, //不报告执行不到的代码错误
-    "allowUnusedLabels": false,    //不报告未使用的标签错误。
-    "experimentalDecorators": true,//启用实验性的ES装饰器
-    "extendedDiagnostics": false   //显示详细的诊段信息。
+    "allowUnusedLabels": false, //不报告未使用的标签错误。
+    "experimentalDecorators": true, //启用实验性的ES装饰器
+    "extendedDiagnostics": false //显示详细的诊段信息。
   },
   "exclude": [
     "node_modules",

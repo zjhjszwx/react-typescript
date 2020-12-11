@@ -30,15 +30,16 @@ const axios = <T>(url: Url, payload?: any): Promise<T> | never => {
     case Urls.TODOS:
       data = todos.slice()
       break
-    case Urls.TOGGLE:
+    case Urls.TOGGLE: {
       const todo = todos.find(({ id }) => id === payload)
       if (todo) {
         todo.done = !todo.done
       }
       break
+    }
     case Urls.ADD:
       todos.push(payload)
-      break;
+      break
     default:
       throw new Error('Unkown api')
   }
@@ -47,5 +48,3 @@ const axios = <T>(url: Url, payload?: any): Promise<T> | never => {
 }
 
 export default axios
-
-

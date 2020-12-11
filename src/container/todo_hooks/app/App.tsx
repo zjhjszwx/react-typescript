@@ -14,7 +14,8 @@ type Todos = Todo[]
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todos>([])
-
+  const a = 1
+  // var b = 1
   useEffect(() => {
     refreshTodos()
   }, [])
@@ -25,9 +26,9 @@ const App: React.FC = () => {
 
   const onToggleTodo = async (todo: Todo) => {
     await axios(Urls.TOGGLE, todo.id)
-    refreshTodos();
+    refreshTodos()
   }
-
+  console.log(123)
   return (
     <div>
       <TodoForm refreshTodos={refreshTodos} />
@@ -40,9 +41,10 @@ const App: React.FC = () => {
               done: todo.done
             })}
           >
+            {/* <a href="javascript:void(0)">123</a> */}
             {todo.name}
           </li>
-        );
+        )
       })}
     </div>
   )
