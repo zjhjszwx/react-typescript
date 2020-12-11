@@ -22,7 +22,7 @@ const TodoForm: React.FC<Props> = ({ refreshTodos }) => {
 
     if (name.trim()) {
       // 这边第二个参数没有做类型约束
-      axios('/api/add', newTodo)
+      axios('/api/add')
       refreshTodos()
       setName('')
     }
