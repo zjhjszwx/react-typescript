@@ -13,7 +13,8 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'no-console': 2
+    'no-console': 2,
+    '@typescript-eslint/explicit-member-accessibility': 0
   },
   overrides: []
 }

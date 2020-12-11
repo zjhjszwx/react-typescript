@@ -28,7 +28,6 @@ const App: React.FC = () => {
     await axios(Urls.TOGGLE, todo.id)
     refreshTodos()
   }
-  console.log(123)
   return (
     <div>
       <TodoForm refreshTodos={refreshTodos} />
