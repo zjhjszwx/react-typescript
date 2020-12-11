@@ -104,7 +104,7 @@ class Drag extends React.Component<drag.DragProps, drag.DragState> {
     document.removeEventListener('mouseup', this._dragEnd)
 
     function a(b) {
-      b = 2
+      b = 3
     }
     a(1)
 
