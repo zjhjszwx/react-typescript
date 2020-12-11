@@ -102,8 +102,7 @@ class Drag extends React.Component<drag.DragProps, drag.DragState> {
     const { onDragEnd } = this.props
     document.removeEventListener('mousemove', this._dragMove)
     document.removeEventListener('mouseup', this._dragEnd)
-
-    ;('foo')
+    ;('foo123')
 
     if (onDragEnd) {
       onDragEnd({
