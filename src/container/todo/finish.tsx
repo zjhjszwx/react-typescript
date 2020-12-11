@@ -1,7 +1,9 @@
-import React, { useContext } from 'react'
-import { context } from './Todo'
+import React, { useContext } from 'react';
+import { context } from './Todo';
 function finish() {
-  const { todoList } = useContext(context)
+  const { todoList } = useContext(context);
+
+  console.log(123);
   return (
     <div className="unfinish">
       {todoList.map(
@@ -13,7 +15,7 @@ function finish() {
           )
       )}
     </div>
-  )
+  );
 }
 
-export default finish
+export default finish;

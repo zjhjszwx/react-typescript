@@ -1,3 +1,5 @@
+const env = process.env.NODE_ENV
+const level = env === "production" ? "error" : "warn";
 module.exports = {
   env: {
     browser: true,
@@ -15,10 +17,10 @@ module.exports = {
   },
   rules: {
 
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-console": level,
+    "no-debugger": level,
     // 不允许使用未使用的变量
-    "@typescript-eslint/no-unused-vars": ["warn", {
+    "@typescript-eslint/no-unused-vars": [level, {
       "vars": "all", "args": "after-used", "ignoreRestSiblings": false
     }],
     // 不允许使用未使用的表达式
