@@ -6,7 +6,11 @@ module.exports = {
     node: true,
     es6: true
   },
-  extends: ["eslint-config-alloy", "eslint-config-alloy/react", "eslint-config-alloy/typescript"],
+  extends: [
+    "eslint-config-alloy",
+    "eslint-config-alloy/react",
+    "eslint-config-alloy/typescript"
+  ],
   globals: {},
   parserOptions: {
     ecmaFeatures: {
@@ -33,6 +37,7 @@ module.exports = {
     "@typescript-eslint/explicit-member-accessibility": 0,
     // 类型断言必须使用 as Type，禁止使用 <Type>，禁止对对象字面量进行类型断言（断言成 any 是允许的）
     "@typescript-eslint/consistent-type-assertions": 0,
+    "@typescript-eslint/no-require-imports": 0,
 
   },
   overrides: []
