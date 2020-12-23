@@ -8,11 +8,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import App from './container/todo_hooks/app/App';
 // import Hello from './container/Hello/Hello';
 // import Hello from './container/Hello/HelloClass';
-import Hello from './container/Hello/HelloHoc';
+// import Hello from './container/Hello/HelloHoc';
+import Support from './container/Support';
 
 ReactDOM.render(
   <Router>
-    <Hello name="1233" loading={true} />
+    <Support />
   </Router>,
   document.getElementById('root') as HTMLElement
 );

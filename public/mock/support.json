@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "result": [
+    {
+      "index": "0",
+      "id": 98,
+      "name": "xx",
+      "logo": "https://app-prod.obs.cn-east-2.myhuaweicloud.com:443/_11164_1602489537584_11.png",
+      "address": "浙江省杭州市",
+      "qrcode": "https://app-prod.obs.cn-east-2.myhuaweicloud.com:443/_1602489539136_temp.jpg",
+      "parent": 0,
+      "isParent": 1,
+      "company": null
+    }
+  ],
+  "errorInfo": null,
+  "extraInfo": null,
+  "status": false,
+  "token": null
+}
