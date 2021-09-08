@@ -12,7 +12,7 @@ enum Direction2 {
   down,
   left,
   right,
-  up = "UP"
+  up = 'UP'
 }
 //字符串枚举
 enum Direction3 {
@@ -24,7 +24,7 @@ enum Direction3 {
 
 // console.log(Direction2.down); //0
 // console.log(Direction2[0]); // 数字枚举可以 反向映射访问
-// console.log(Direction2)
+// console.log(Direction2);
 
 //异构枚举
 enum Answer {
@@ -41,7 +41,7 @@ enum Char {
   c = 1 + 3,
   //computed 在运行时才会被计算
   d = Math.random(),
-  e = '123'.length,
+  e = '123'.length
   // f 在computed后面的属性必须要赋值
 }
 
@@ -51,45 +51,45 @@ const enum Month {
   Feb
 }
 
-let month = [Month.Jan, Month.Feb]
+let month = [Month.Jan, Month.Feb];
 
 //枚举类型
 //在某些情况在枚举和枚举成员都可以作为单独的类型
-enum E { a, b }
-enum F { a = 0, b = 1 }
-enum G { a = 'a', b = 'b' }
+enum E {
+  a,
+  b
+}
+enum F {
+  a = 0,
+  b = 1
+}
+enum G {
+  a = 'a',
+  b = 'b'
+}
 
-let e: E = 3
-let f: F = 3
+let e: E = 3;
+let f: F = 3;
 
-let e1: E.a = 2
-let e2: F.b
+let e1: E.a = 2;
+let e2: F.b;
+// console.log(e1 === e2);
 // e1 === e2 不同枚举成员之间不能比较
 //同一枚举类型的不同成员属于不同类型，但都与number类型兼容，所以它们可以被赋值number，但不能比较（因为类型永远不同，没有比较的必要）
-let e3: E.a = 1
-e1 === e3 //可以比较
+let e3: E.a = 1;
+e1 === e3; //可以比较
+console.log(e1 === e3);
 
-let g1: G = G.b
-let g2: G.b = G.b //只能是自己
-
-function initByRole(role) {
-  if (role === 1 || role === 2) {
-    // do sth
-  } else if (role === 3 || role === 4) {
-    // do sth
-  } else if (role === 5) {
-    // do sth
-  } else {
-    // do sth
-  }
-}
+let g1: G = G.b;
+let g2: G.b = G.b; //只能是自己
+// console.log(g1 === g2);
 
 enum RoleTypes {
   a = 1,
   b,
   c,
   d,
-  f,
+  f
 }
 
 function initByRoleTs(role: RoleTypes) {
@@ -103,3 +103,9 @@ function initByRoleTs(role: RoleTypes) {
     // do sth
   }
 }
+
+let func6 = function (name: string = 'jack', age?: number) {
+  console.log(name, age); // jack 20
+};
+
+func6(undefined, 20);

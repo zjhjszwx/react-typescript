@@ -1,40 +1,48 @@
 // 基本类型
-let bool: boolean = true
-let num: number = 123
-let str: string = "123"
+let bool: boolean = true;
+let num: number = 123;
+let str: string = '123';
 
 //Array
-let arr1: number[] = [1, 2, 3]
-let arr2: Array<Number | string> = [1, 2, 3, 'a']
+let arr1: number[] = [1, 2, 3];
+let arr2: Array<Number | string> = [1, 2, 3, 'a'];
 
-// tuple 
+// tuple
 // 元组越界无法访问
-let tuple: [number, string] = [0, 'a']
+let tuple: [number, string] = [0, 'a'];
 
 //function
 //返回值会自己推断出来
-let add = (x: number, y: number) => x + y
+let add = (x: number, y: number) => x + y;
 //对象
-let obj: { x: number, y: number } = { x: 1, y: 2 }
+let obj: { x: number; y: number } = { x: 1, y: 2 };
 //Symbol
-let s1: Symbol = Symbol()
+let s1: Symbol = Symbol();
 //undefined 和 null
-let un: undefined = undefined
-let nu: null = null
+let un: undefined = undefined;
+let nu: null = null;
 
 //void
 //void 0 = undefined
-let noReturn = () => { }
+let noReturn = () => {};
 
 //any
-let xx
-xx = 1
-xx = true
+let xx: any;
+xx = 1;
+xx = true;
 
 //never never类型表示的是那些永不存在的值的类型。
 let error = () => {
-  throw new Error('error')
-}
+  throw new Error('error');
+};
 let endless = () => {
-  while (true) { }
-}
+  while (true) {}
+};
+
+let value: unknown;
+value = 123;
+value = 'Hello';
+
+let value1: unknown = value;
+let value2: any = value;
+// let value3: boolean = value; // Error

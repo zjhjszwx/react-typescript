@@ -10,10 +10,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import Hello from './container/Hello/HelloClass';
 // import Hello from './container/Hello/HelloHoc';
 import Support from './container/Support';
+import Todo from './container/todo/Todo';
 
 ReactDOM.render(
   <Router>
-    <Support />
+    <Todo />
   </Router>,
   document.getElementById('root') as HTMLElement
 );

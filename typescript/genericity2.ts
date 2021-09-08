@@ -42,7 +42,7 @@ const id4 = <T extends NameType2>(arg: T): T => {
 // https://juliangaramendy.dev/blog/when-ts-generics
 
 // 集合类也是泛型
-const a: Array<string> = ['1'];
+// const a: Array<string> = ['1'];
 
 // 类型推导
 function id5<T>(arg: T): T {
