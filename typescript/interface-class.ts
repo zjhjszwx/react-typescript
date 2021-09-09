@@ -1,6 +1,7 @@
 interface Human {
   name: string;
   eat: () => void;
+  // new (name: string):void;
 }
 
 // 类实现接口的时候必须要实现所有的属性
@@ -35,3 +36,21 @@ let hoy: Boy = {
 };
 
 // 接口也可以继承类,相当于继承类的结构
+class Control {
+  private state: any;
+}
+interface SelectableControl extends Control {
+  select(): void;
+}
+class Button extends Control implements SelectableControl {
+  select() {}
+}
+class TextBox extends Control {
+  select() {}
+}
+// 错误：“Image”类型缺少“state”属性。
+// class Image implements SelectableControl {
+//   select() { }
+// }
+// class Location {
+// }

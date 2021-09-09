@@ -57,7 +57,7 @@ interface Obj {
   a: number;
   b: string;
 }
-let key: keyof Obj; // "a" | "b"
+// let key: keyof Obj; // "a" | "b"
 console.log(getValues(obj, ['a', 'b']));
 // console.log(getValues(obj, ['c', 'd'])) //error
 
@@ -70,6 +70,11 @@ interface Obj1 {
 }
 
 type ReadonlyObj = Readonly<Obj>;
+let readonlyE: ReadonlyObj = {
+  a: 1,
+  b: 'str'
+};
+// readonlyE.a = 2
 // 参数可选
 type PartialObj = Partial<Obj>;
 // 单独抽取
